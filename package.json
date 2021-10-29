@@ -6,7 +6,8 @@
   "author": "Kelvin Oliveira <keelviinn@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
   "dependencies": {
     "csv-parse": "^4.16.3",
@@ -15,6 +16,7 @@
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.1.6",
+    "tsyringe": "^4.6.0",
     "typeorm": "^0.2.38",
     "uuid": "^8.3.2"
   },
