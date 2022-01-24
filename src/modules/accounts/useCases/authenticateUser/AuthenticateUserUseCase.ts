@@ -32,7 +32,7 @@ class AuthenticateUserUseCase {
     if (!user) throw new AppError("Email or password incorrect!");
     if (!await compare(password, user.password)) throw new AppError("Email or password incorrect!");
 
-    const token = sign({}, process.env.APP_SECRET, { subject: user.id, expiresIn: "1d"});
+    const token = sign({}, process.env.APP_SECRET || 'test', { subject: user.id, expiresIn: "1d"});
 
     const tokenData = {
       user: {
